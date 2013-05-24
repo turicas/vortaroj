@@ -1,0 +1,7 @@
+-r project.txt
+
+nose
+yanc
+coverage
+tox
+docutils
