@@ -10,8 +10,8 @@ of high level data structures, such as
 [sets](http://docs.python.org/2/tutorial/datastructures.html#sets) and
 [dictionaries](http://docs.python.org/2/tutorial/datastructures.html#dictionaries).
 
-In special, pythonistas are _hash addicted_: they like dictionaries and use it
-a lot. But sometimes, having an in-memory dict is not sufficient: we want it
+In special, pythonistas are _hash ad**dict**ed_: we like dictionaries and use it
+a lot. But sometimes, having an in-memory `dict` is not sufficient: we want it
 persistent or acessible through other machines. Solutions for this kind of
 problem are available, like [Memcache](http://www.memcached.org/),
 [MemcacheDB](http://memcachedb.org/), [Riak](http://basho.com/riak/),
@@ -23,6 +23,32 @@ interface to something different/weird.
 [vortaroj](https://github.com/turicas/vortaroj) came to solve this problem: it
 has a `dict`-like interface to many backends; it's like an ORM to key-value
 databases.
+
+
+## How to install
+
+Since we don't have a release yet, you should download the code and execute:
+
+    python setup.py install
+
+As soon as we have a release, it'll be available at
+[PyPI](http://pypi.python.org/pypi).
+
+## How to use
+
+Using `vortaroj` is as simple: choose a backend, instantiate a class and use it
+like a Python `dict`, like below:
+
+    >>> # choose a backend and instantiate:
+    >>> from vortaroj import MongoDict
+    >>> my_dict = MongoDict(host='127.0.0.1', port=27017)
+
+    >>> # use like a regular dict:
+    >>> my_dict['python'] = 42
+    >>> print(my_dict['python'])
+    42
+    >>> del my_dict['python']
+    >>> print(my_dict['python'])
 
 
 ## Why the name "vortaroj"?
