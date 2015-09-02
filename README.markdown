@@ -70,5 +70,6 @@ somebody else, [@andrebco](https://github.com/andrebco) suggested the plural
 
 ## Related Links
 
-- <https://github.com/disqus/durabledict>
-- <https://github.com/reclosedev/requests-cache>
+- [durabledict](https://github.com/disqus/durabledict)
+- [requests-cache](https://github.com/reclosedev/requests-cache)
+- [datastore](https://pypi.python.org/pypi/datastore)
